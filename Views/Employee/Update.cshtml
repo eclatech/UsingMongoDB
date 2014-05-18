@@ -1,0 +1,35 @@
+﻿@model UsingMongoDB.Models.Employee
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Update</title>
+</head>
+<body>
+
+    @using (Html.BeginForm())
+    {
+
+        <table>
+            <tr>
+                <th>Employee Name</th>
+                <td>
+                    @Html.HiddenFor(m => m.EmployeeId)
+                    @Html.TextBoxFor(m => m.EmployeeName)
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="Update" />
+                </td>
+            </tr>
+        </table>
+    }
+</body>
+</html>

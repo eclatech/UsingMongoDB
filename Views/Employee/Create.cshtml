@@ -1,0 +1,34 @@
+﻿@model UsingMongoDB.Models.Employee
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm())
+        {
+            <table>
+                <tr>
+                    <td>EmployeeName</td>
+                    <td>
+                        @Html.TextBoxFor(m => m.EmployeeName)
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="submit" value="Add Employee" />
+                    </td>
+                </tr>
+            </table>
+        }
+    </div>
+</body>
+</html>
